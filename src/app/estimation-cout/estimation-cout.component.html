@@ -1,0 +1,32 @@
+<form [formGroup]="form" (ngSubmit)="estimer(form.value)">
+    <div class="form-group">
+        <label>Position Souhaité</label>
+        <select type="text" formControlName="position" class="form-control" >
+            <option>vide</option>
+            <option>haut</option>
+            <option>bas</option>
+            </select>
+            <div *ngIf="position.valid" class="alert alert-success">
+                position success
+              </div>
+              <div *ngIf="position.invalid" class="alert alert-danger">
+                <div *ngIf="position.touched &&(position.touched || position.dirty)" class="alert alert-danger">
+                    position doit etre obligatoire
+                          </div>
+              </div>
+    </div>
+    <div class="form-group">
+        <label>Nombre de caracteres</label>
+        <input type="number" class="form-control" formControlName="caractere">
+        <div *ngIf="caractere.valid" class="alert alert-success">
+            price success
+          </div>
+          <div *ngIf="caractere.invalid" class="alert alert-danger">
+            <div *ngIf="caractere.touched &&(caractere.touched || caractere.dirty)" class="alert alert-danger">
+                le nombre de caractere est obligatoire et doit etre inferieure a 60
+            </div>
+          </div>
+    </div>
+    <button type="submit">estimer</button>
+    <p>le cout est egale : {{cout}}</p>
+</form>

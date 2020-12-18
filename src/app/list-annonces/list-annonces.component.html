@@ -1,0 +1,5 @@
+<div [ngClass]="{'C1': annonce.etat == 'annule','C2': annonce.etat == 'confirme', 'C3':annonce.etat == 'en attente' }" *ngFor="let annonce of annonces">
+
+    Titre : {{annonce.titre}} / Description :{{annonce.description}} / Position : {{annonce.position}}  / Etat : {{annonce.etat}}
+
+</div>

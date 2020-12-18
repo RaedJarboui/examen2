@@ -1,0 +1,28 @@
+{
+  "annonces": [
+    {
+      "id": 1,
+      "titre": "json-server",
+      "position": "typicode",
+      "description": "typicode",
+      "etat": "confirme"
+
+    },
+    {
+     "id": 2,
+      "titre": "Raed",
+      "position": "typicode",
+      "description": "typicode",
+      "etat": "annule"
+
+    },
+    {
+      "id": 3,
+       "titre": "Raed",
+       "position": "raed",
+       "description": "typicode",
+       "etat": "en attente"
+ 
+     }
+  ]
+}
